@@ -10,7 +10,7 @@ const user_schema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'note',
         req: true
-        // tänne??
+        
     }],
     lists: [{
         type: mongoose.Schema.Types.ObjectId,
