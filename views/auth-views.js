@@ -1,6 +1,7 @@
 const login_view = () => {
     let html = `
     <html>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <body>
         <form action="/login" method="POST">
             <input type="text" name="user_name">

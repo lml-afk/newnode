@@ -1,27 +1,32 @@
 const lists_view = ((data) => {
     let html = `
     <html>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <h2> Shopping lists </h2>
     <body>
         Logged in as user: ${data.user_name}
         <form action="/logout" method="POST">
             <button type="submit">Log out</button>
         </form>`;
 
-
-    data.lists.forEach((list) => {
-        html += list.text;
         html += `
-            <form action="delete-list" method="POST">
-                <input type="hidden" name="list_id" value="${list._id}">
-                <button type="submit">Delete Item</button>
-            </form>
-            `;
+        <form action="/" method="GET">
+            <button type="submit">Back</button>
+        </form>`;
+        
+    data.lists.forEach((list) => {
+        html += `item name:  `+list.text;
+        html += `<br>`;
+        html += `quantity:  `+list.number;
+        html += `<br>`;
     });
 
     html += `
         <form action="/add-list" method="POST">
-            <input type="text" name="list">Product <br>
-            <input type="number" name="number"><br>
+        Product<br>
+        <input type="text" name="list"><br>
+        Quantity<br>
+        <input type="number" name="number"><br>
 
 
             <button type="submit">Add Item</button>

@@ -9,7 +9,9 @@ const list_schema = new Schema({
     number:{
         type: Number,
         required: true
-        }
+        },
+   
+
 });
 const list_model = new mongoose.model('list', list_schema);
 

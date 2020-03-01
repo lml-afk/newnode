@@ -1,6 +1,9 @@
 const notes_view = ((data) => {
     let html = `
     <html>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <h1> Shopping list app</h1>
     <body>
         Logged in as user: ${data.user_name}
         <form action="/logout" method="POST">
